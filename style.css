@@ -1,0 +1,393 @@
+body {
+    margin: 0; /* gets rid of the browser's random default spacing */
+    font-family: Verdana, Arial, sans-serif; /* simple clean fonts, nothing too fancy */
+    background-color: #f3f3f3; /* soft light grey background */
+    color: #2d2147; /* dark purple-ish text color used across the site */
+}
+
+.header {
+    background-color: #add3e4; /* top bar color */
+    padding: 22px 32px; /* space inside the navbar so it doesn't look cramped */
+    display: flex; /* puts logo + nav on the same row */
+    justify-content: space-between; /* pushes logo left and nav right */
+    align-items: center; /* lines them up nicely vertically */
+}
+
+.logo {
+    font-size: 26px; /* makes my name stand out a bit */
+    font-weight: bold;
+    color: #2d2147;
+}
+
+.nav {
+    display: flex; /* makes nav links sit in a row instead of stacking */
+    gap: 24px; /* space between each link */
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none; /* removes the ugly underline */
+    color: #2d2147;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    opacity: 0.7; /* makes links fade a bit when hovered, just to make it feel less dead */
+}
+
+.btn {
+    background-color: #2d66c3; /* blue button for download CV */
+    color: white !important; /* keeps text white no matter what */
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 4px; /* small rounding so it looks nicer */
+}
+
+/* home page stuff */
+
+.intro {
+    padding: 80px 40px 90px 40px; /* good amount of space so the page breathes */
+    display: flex; /* puts text on one side and image on the other */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px; /* space between the two sides */
+}
+
+.intro-text {
+    width: 60%; /* gives most of the room to the text */
+}
+
+.intro-text h1 {
+    font-size: 60px; /* big intro name at the top */
+    font-weight: normal; /* less aggressive than bold */
+    margin: 0 0 20px 0;
+}
+
+.email {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.bio {
+    font-size: 19px;
+    line-height: 1.7; /* makes paragraph easier to read */
+    color: #222;
+    max-width: 760px; /* stops the text from stretching way too far across the screen */
+}
+
+.intro-image {
+    width: 30%; /* image side takes less space than text side */
+    display: flex;
+    justify-content: center;
+    padding-top: 20px; /* nudges image down a bit so it lines up nicer */
+}
+
+.profile-pic {
+    width: 220px;
+    height: 220px;
+    object-fit: cover; /* makes sure the image fills the circle properly instead of stretching weird */
+    border-radius: 50%; /* makes it a circle */
+    border: 10px solid #f6f6f6; /* white-ish border around profile pic */
+}
+
+.education {
+    background-color: #d8cec7; /* different section color so it stands out */
+    padding: 70px 40px 80px 40px;
+}
+
+.section-label {
+    color: #2d66c3;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 0 35px 0;
+    border-top: 1px solid #8fb0d8; /* little line at the top, makes sections look cleaner */
+    padding-top: 12px;
+    letter-spacing: 0.5px;
+}
+
+.education-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.education-left h2 {
+    font-size: 32px;
+    margin: 0 0 12px 0;
+}
+
+.education-left p {
+    margin: 6px 0;
+    font-size: 18px;
+}
+
+.education-right p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.experience {
+    padding: 55px 40px 75px 40px;
+}
+
+.exp-item {
+    display: grid; /* grid makes the experience layout easier to control */
+    grid-template-columns: 1.3fr 1fr 0.7fr; /* text / image / date */
+    gap: 35px;
+    align-items: start;
+    margin-bottom: 65px; /* space between each experience */
+}
+
+.exp-text h2 {
+    font-size: 22px;
+    margin: 0 0 6px 0;
+}
+
+.exp-sub,
+.exp-place {
+    margin: 0;
+    font-size: 15px;
+}
+
+.exp-desc {
+    margin-top: 16px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #222;
+    max-width: 560px;
+}
+
+.exp-image {
+    display: flex;
+    justify-content: center;
+}
+
+.exp-image img {
+    width: 100%;
+    max-width: 300px;
+    height: 210px; /* fixed height so all experience images look more even */
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.epfl-img {
+    max-width: 360px !important; /* this one needed its own size because it was being annoying */
+}
+
+.exp-date {
+    text-align: right;
+}
+
+.exp-date p {
+    margin: 0;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.contact {
+    padding: 60px 40px 80px 40px;
+}
+
+.contact-content {
+    display: flex;
+    gap: 80px;
+}
+
+.contact-item h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.contact-item p {
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+/* portfolio page */
+
+.portfolio-page {
+    padding: 65px 40px 90px 40px; /* top gap so it doesn't instantly smash into the cards */
+}
+
+.portfolio-title {
+    margin-bottom: 40px; /* space between title area and the grid */
+}
+
+.portfolio-title h1 {
+    font-size: 46px;
+    margin: 0 0 14px 0;
+}
+
+.portfolio-title p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #222;
+    max-width: 760px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 by 3 layout */
+    gap: 35px; /* space between the boxes */
+}
+
+.portfolio-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden; /* keeps image corners matching the card */
+    padding-bottom: 18px;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 250px; /* same height for all images so they line up clean */
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-card h2 {
+    font-size: 22px;
+    margin: 18px 18px 10px 18px;
+}
+
+.portfolio-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0 18px;
+    color: #222;
+}
+
+/* code projects page */
+
+.projects {
+    padding: 65px 40px 90px 40px;
+}
+
+.projects h1 {
+    font-size: 46px;
+    margin: 0 0 35px 0;
+}
+
+.project-row {
+    display: flex;
+    justify-content: center; /* centers the project cards nicely */
+    gap: 30px;
+    flex-wrap: wrap; /* lets them drop down on smaller screens instead of exploding the layout */
+}
+
+.project-item {
+    width: 360px; /* fixed-ish card width so they look balanced */
+    background-color: white;
+    border-radius: 12px;
+    padding: 18px;
+    box-sizing: border-box;
+}
+
+.project-item img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.project-item h2 {
+    margin: 16px 0 10px 0;
+    font-size: 23px;
+}
+
+.project-item p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #222;
+}
+
+.project-btn {
+    margin-top: 18px;
+    background-color: #2d66c3;
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* makes the site not fall apart on smaller screens */
+
+@media (max-width: 1000px) {
+    .intro {
+        flex-direction: column; /* stacks intro text + image */
+    }
+
+    .intro-text,
+    .intro-image {
+        width: 100%;
+    }
+
+    .education-row {
+        flex-direction: column;
+    }
+
+    .exp-item {
+        grid-template-columns: 1fr; /* stacks each experience vertically */
+        gap: 20px;
+    }
+
+    .exp-date {
+        text-align: left;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* portfolio becomes 1 column on smaller screens */
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column; /* navbar stacks on smaller screens */
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .intro-text h1 {
+        font-size: 46px;
+    }
+
+    .projects,
+    .portfolio-page,
+    .intro,
+    .education,
+    .experience,
+    .contact {
+        padding-left: 24px;
+        padding-right: 24px; /* smaller side padding for phones */
+    }
+
+    .project-item {
+        width: 100%;
+    }
+
+    .portfolio-card img,
+    .project-item img,
+    .exp-image img {
+        height: 220px; /* keeps images from getting too massive or weird on smaller screens */
+    }
+}
